@@ -1,5 +1,1 @@
 #include "delta_omega.dtsi"
-
-&default_transform {
-	col-offset = <17>;
-};

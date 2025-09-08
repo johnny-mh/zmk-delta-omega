@@ -4,8 +4,9 @@ name: delta_omega
 type: shield
 url: https://github.com/unspecworks/delta-omega
 requires:
-  - nice_nano_v2
+  - seeeduino_xiao_ble
 features:
   - keys
 siblings:
   - delta_omega_left
+  - delta_omega_right

@@ -19,5 +19,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: seeeduino_xiao_ble
     shield: delta_omega_left
+  - board: seeeduino_xiao_ble
+    shield: delta_omega_right

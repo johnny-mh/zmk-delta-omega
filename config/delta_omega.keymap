@@ -1,3 +1,5 @@
+#include "zmk-helpers/helper.h"
+#include "zmk-helpers/key-labels/delta_omega.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -114,6 +116,4 @@
             label = "System";
         };
     };
-
-    conditional_layers { compatible = "zmk,conditional-layers"; };
 };

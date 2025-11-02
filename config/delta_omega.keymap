@@ -94,10 +94,10 @@
 
         Digits {
             bindings = <
-&kp PIPE                &kp DOLLAR         &kp LEFT_BRACE              &kp RIGHT_BRACE                 &press_two_keys EQUAL GREATER_THAN  &kp PLUS   &kp N7        &kp N8        &kp N9        &hmr SLASH SEMICOLON
-&mt LSHIFT EXCLAMATION  &mt LCTRL AT_SIGN  &mt LGUI LEFT_PARENTHESIS   &mt LALT RIGHT_PARENTHESIS      &kp BACKSLASH                       &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
-&kp AMPERSAND           &kp LCTRL          &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &kp GRAVE                           &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
-                                                                       &trans                          &trans                              &kp N0     &trans
+&kp PIPE                 &kp DOLLAR          &kp LEFT_BRACE              &kp RIGHT_BRACE                 &press_two_keys EQUAL GREATER_THAN  &kp PLUS   &kp N7        &kp N8        &kp N9        &hmr SLASH SEMICOLON
+&hml LSHIFT EXCLAMATION  &hml LCTRL AT_SIGN  &hml LGUI LEFT_PARENTHESIS  &hml LALT RIGHT_PARENTHESIS     &kp BACKSLASH                       &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
+&kp AMPERSAND            &kp LCTRL           &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &kp GRAVE                           &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
+                                                                         &trans                          &trans                              &kp N0     &trans
             >;
 
             label = "Digits";

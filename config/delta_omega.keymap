@@ -6,6 +6,14 @@
 &lt {
     quick-tap-ms = <200>;
     tapping-term-ms = <175>;
+    require-prior-idle-ms = <0>;
+};
+
+&mt {
+    tapping-term-ms = <175>;
+    quick-tap-ms = <200>;
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <0>;
 };
 
 / {
@@ -48,39 +56,15 @@
         };
     };
 
-    behaviors {
-        hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        hmr: hmr {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <200>;
-            flavor = "tap-preferred";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         QWERTY {
             bindings = <
-&hml TAB Q     &kp W         &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O         &hmr SQT P
-&hml LSHIFT A  &hml LCTRL S  &hml LGUI D  &hml LALT F  &kp G        &kp H        &hmr RALT J  &hmr LGUI K  &hmr LCTRL L  &hmr LSHIFT SEMICOLON
-&kp Z          &kp X         &kp C        &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT       &kp SLASH
-                                          &mo 2        &lt 1 SPACE  &lt 3 ENTER  &mo 2
+&mt TAB Q     &kp W        &kp E       &kp R       &kp T        &kp Y        &kp U       &kp I       &kp O        &mt SQT P
+&mt LSHIFT A  &mt LCTRL S  &mt LGUI D  &mt LALT F  &kp G        &kp H        &mt RALT J  &mt LGUI K  &mt LCTRL L  &mt LSHIFT SEMICOLON
+&kp Z         &kp X        &kp C       &kp V       &kp B        &kp N        &kp M       &kp COMMA   &kp DOT      &kp SLASH
+                                       &mo 2       &lt 1 SPACE  &lt 3 ENTER  &mo 2
             >;
 
             label = "BASE";
@@ -99,10 +83,10 @@
 
         Digits {
             bindings = <
-&kp PIPE                 &kp DOLLAR          &kp LEFT_BRACE               &kp RIGHT_BRACE                  &press_two_keys EQUAL GREATER_THAN  &kp PLUS   &kp N7        &kp N8        &kp N9        &hmr SLASH SEMICOLON
-&hml LSHIFT EXCLAMATION  &hml LCTRL AT_SIGN  &hml LGUI LEFT_PARENTHESIS   &hml LALT RIGHT_PARENTHESIS      &kp BACKSLASH                       &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
-&kp AMPERSAND            &kp LCTRL           &hml LESS_THAN LEFT_BRACKET  &hml GREATER_THAN RIGHT_BRACKET  &kp GRAVE                           &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
-                                                                          &trans                           &trans                              &kp N0     &trans
+&kp PIPE                &kp DOLLAR         &kp LEFT_BRACE              &kp RIGHT_BRACE                 &press_two_keys EQUAL GREATER_THAN  &kp PLUS   &kp N7        &kp N8        &kp N9        &mt SLASH SEMICOLON
+&mt LSHIFT EXCLAMATION  &mt LCTRL AT_SIGN  &mt LGUI LEFT_PARENTHESIS   &mt LALT RIGHT_PARENTHESIS      &kp BACKSLASH                       &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MULTIPLY
+&kp AMPERSAND           &kp LCTRL          &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &kp GRAVE                           &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD
+                                                                       &trans                          &trans                              &kp N0     &trans
             >;
 
             label = "Digits";
